@@ -11,14 +11,8 @@
         <p>
             <a href="mentionslegales.php">Mentions Légales</a></br>
             <a href="cgu.php">Conditions générales d'utilisation</a></br>
-            <?php
-            
-                if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-                    echo "<a href=\"connadmin.php\">Connexion Admin</a>";
-                }
-            ?>
-
-        </p>    
+        </p>  
+          
         <img src="../IMAGES/14501.svg" width="120px">
         <h6>@2021 par GreenRoad.</h6>
         <a href="https://www.m.me/100720802444480">

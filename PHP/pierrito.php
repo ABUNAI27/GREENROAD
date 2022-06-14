@@ -11,11 +11,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <?php
 //---------------connexion à la BDD---------------------------------
-$db = mysqli_connect("localhost", "root", "", "greenroad");
-if(!$db) {
-    echo "Connexion non établie.";
-    exit;
-}
+include_once('config.php');
 
 //---------stats du joueur------------------------
 $id=$_SESSION["id"];

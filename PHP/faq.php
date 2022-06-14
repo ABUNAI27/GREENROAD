@@ -4,11 +4,7 @@
 
 //------CONNEXION FAQ---------------
 
-$db= mysqli_connect("localhost", "root", "", "greenroad");
-if(!$db) {
-    echo "Connexion non établie.";
-    exit;
-}
+include_once('config.php');
 
 //------RECUPERATION DES QUESTIONS/REPONSES-----------
 $stmt = $db->query("SELECT question, reponse FROM questions");

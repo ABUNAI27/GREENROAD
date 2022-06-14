@@ -1,6 +1,9 @@
 <?php
 // Initialiser la session
 session_start();
+
+// Connection à la BDD
+include_once('config.php');
  
 // Vérifiez si l'utilisateur est connecté, sinon le redirige à la page de connexion
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){

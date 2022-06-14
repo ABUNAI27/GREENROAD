@@ -1,8 +1,5 @@
 <?php
-$db = mysqli_connect("localhost", "root", "", "greenroad");
-if(!$db) {
-    echo "Connexion non établie.";
-    exit;
+include_once('config.php');
 }
 
 //-------FICHIER JSON DES CAPTEURS------------------------

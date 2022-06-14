@@ -2,11 +2,7 @@
 
 //Connection à la BDD, affiche les erreurs si il y a un problème
 
-$db = mysqli_connect("localhost", "root", "", "greenroad");
-if(!$db) {
-    echo "Connexion non établie.";
-    exit;
-}
+include_once('config.php');
 
 $redirection=0;
 

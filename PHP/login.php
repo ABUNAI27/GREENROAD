@@ -11,11 +11,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
  
 // Inclure le fichier config
-$link= mysqli_connect("localhost", "root", "", "greenroad");
-if(!$link) {
-    echo "Connexion non établie.";
-    exit;
-}
+include_once('config.php');
  
 // Définir des variables et initialiser avec des valeurs vides
 $username = $password = "";
@@ -43,7 +39,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Préparer une instruction SELECT
         $sql = "SELECT idUser, pseudo, password, idEtat, idRole FROM users WHERE pseudo = ?";
         
-        if($stmt = mysqli_prepare($link, $sql)){
+        if($stmt = mysqli_prepare($db, $sql)){
             // Lier les variables à l'instruction préparée en tant que paramètres
             mysqli_stmt_bind_param($stmt, "s", $param_username);
             
@@ -94,7 +90,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     // Fermer la connexion
-    mysqli_close($link);
+    mysqli_close($db);
 }
 
 

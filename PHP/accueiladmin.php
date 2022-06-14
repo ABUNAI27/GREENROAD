@@ -12,11 +12,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION[
 
 <?php
 //---------------connexion à la BDD---------------------------------
-$db = mysqli_connect("localhost", "root", "", "greenroad");
-if(!$db) {
-    echo "Connexion non établie.";
-    exit;
-}
+include_once('config.php');
 
 //-----------Dernières connexions administrateur------------------
 $stmt = $db->query("SELECT dateCo, adresseIP, idUser FROM connexionsadmin ORDER BY dateCo DESC LIMIT 0,999");
