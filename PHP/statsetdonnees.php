@@ -21,37 +21,37 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <body>
     <section class="login">
-        <?php
+            <?php
+            
+                if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+                    echo "<a class=\"btn1\" href=\"https://greenroad-g3b.herogu.garageisep.com/register.php\">Inscription</a>";
+                    echo "<a class=\"btn2\" href=\"https://greenroad-g3b.herogu.garageisep.com/login.php\">Connexion</a>";
+                }else{
+                    echo "<a href=\"../PHP/userpage.php\"><img src=\"../images/profillogo.png\"></a>";
+                    echo "<a class=\"btn3\" href=\"https://greenroad-g3b.herogu.garageisep.com/logout.php\" >Déconnexion</a>";
+                }
+            ?>
+        </section>
+
         
-            if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-                echo "<a class=\"btn1\" href=\"../PHP/register.php\">Inscription</a>";
-                echo "<a class=\"btn2\" href=\"../PHP/login.php\">Connexion</a>";
-            }else{
-                echo "<a href=\"../PHP/userpage.php\"><img src=\"../images/profillogo.png\"></a>";
-                echo "<a class=\"btn3\" href=\"../PHP/logout.php\" >Déconnexion</a>";
+        <nav>
+            <a href="https://greenroad-g3b.herogu.garageisep.com/MainPage.php">
+                <img src="../IMAGES/GreenRoad.gif">
+            </a>
+            <h1>GreenRoad</h1>
+            <div class="onglets">
+                <ul>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/MainPage.php">Accueil</a></li>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/caaapa.php">L'équipe</a></li>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/contact.php">Contact</a></li>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/faq.php">FAQ</a></li>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/cartographie.php">Cartographie</a></li>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/statsetdonnees.php">Statistiques</a></li>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/pierrito.php" class="pierrito">Pierrito Game<span><img src="../IMAGES/pierrito.png"/></span></a></li>
+                </ul>
+            </div>
 
-            }
-        ?>
-
-    </section>
-    <nav>
-        <a href="../php/MainPage.php">
-            <img src="../IMAGES/GreenRoad.gif">
-        </a>
-        <h1>GreenRoad</h1>
-        <div class="onglets">
-        <ul>
-                </li><a href="../php/MainPage.php">Accueil</a></li>
-                </li><a href="../php/caaapa.php">L'équipe</a></li>
-                </li><a href="../php/contact.php">Contact</a></li>
-                </li><a href="../php/faq.php">FAQ</a></li>
-                </li><a href="../php/cartographie.php">Cartographie</a></li>
-                </li><u><a href="../php/statsetdonnees.php">Statistiques</a></u></li>
-                </li><a href="../php/pierrito.php" class="pierrito">Pierrito Game<span><img src="../IMAGES/pierrito.png"/></span></a></li>
-            </ul>
-        </div>
-
-    </nav>
+        </nav>
 
     <section class="stats">
         <div class="time">
