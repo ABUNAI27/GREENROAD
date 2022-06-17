@@ -71,19 +71,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     </section>
     <nav>
-        <a href="../php/MainPage.php">
+        <a href="../PHP/MainPage.php">
             <img src="../IMAGES/GreenRoad.gif">
         </a>
         <h1>GreenRoad</h1>
         <div class="onglets">
             <ul>
-                </li><a href="../php/MainPage.php">Accueil</a></li>
-                </li><a href="../php/caaapa.php">L'équipe</a></li>
-                </li><a href="../php/contact.php">Contact</a></li>
-                </li><a href="../php/faq.php">FAQ</a></li>
-                </li><u><a href="../php/cartographie.php">Cartographie</a></u></li>
-                </li><a href="../php/statsetdonnees.php">Statistiques</a></li>
-                </li><a href="../php/pierrito.php" class="pierrito">Pierrito Game<span><img src="../IMAGES/pierrito.png"/></span></a></li>
+                </li><a href="../PHP/MainPage.php">Accueil</a></li>
+                </li><a href="../PHP/caaapa.php">L'équipe</a></li>
+                </li><a href="../PHP/contact.php">Contact</a></li>
+                </li><a href="../PHP/faq.php">FAQ</a></li>
+                </li><u><a href="../PHP/cartographie.php">Cartographie</a></u></li>
+                </li><a href="../PHP/statsetdonnees.php">Statistiques</a></li>
+                </li><a href="../PHP/pierrito.php" class="pierrito">Pierrito Game<span><img src="../IMAGES/pierrito.png"/></span></a></li>
             </ul>
         </div>
     </nav>
