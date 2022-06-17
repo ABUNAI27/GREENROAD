@@ -43,7 +43,7 @@ if (!empty($_POST)) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> GreenRoad</title>
-        <link rel="stylesheet" href="https://greenroad-g3b.herogu.garageisep.com/MainPage.css?v=<?php echo time(); ?>"> 
+        <link rel="stylesheet" href="https://greenroad-g3b.herogu.garageisep.com/CSS/MainPage.css?v=<?php echo time(); ?>"> 
     </head>
 
 
@@ -53,30 +53,30 @@ if (!empty($_POST)) {
             <?php
             
                 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-                    echo "<a class=\"btn1\" href=\"https://greenroad-g3b.herogu.garageisep.com/register.php\">Inscription</a>";
-                    echo "<a class=\"btn2\" href=\"https://greenroad-g3b.herogu.garageisep.com/login.php\">Connexion</a>";
+                    echo "<a class=\"btn1\" href=\"https://greenroad-g3b.herogu.garageisep.com/PHP/register.php\">Inscription</a>";
+                    echo "<a class=\"btn2\" href=\"https://greenroad-g3b.herogu.garageisep.com/PHP/login.php\">Connexion</a>";
                 }else{
                     echo "<a href=\"../PHP/userpage.php\"><img src=\"../images/profillogo.png\"></a>";
-                    echo "<a class=\"btn3\" href=\"https://greenroad-g3b.herogu.garageisep.com/logout.php\" >Déconnexion</a>";
+                    echo "<a class=\"btn3\" href=\"https://greenroad-g3b.herogu.garageisep.com/PHP/logout.php\" >Déconnexion</a>";
                 }
             ?>
         </section>
 
         
         <nav>
-            <a href="https://greenroad-g3b.herogu.garageisep.com/MainPage.php">
-                <img src="https://greenroad-g3b.herogu.garageisep.com/GreenRoad.gif">
+            <a href="https://greenroad-g3b.herogu.garageisep.com/PHP/MainPage.php">
+                <img src="https://greenroad-g3b.herogu.garageisep.com/IMAGES/GreenRoad.gif">
             </a>
             <h1>GreenRoad</h1>
             <div class="onglets">
                 <ul>
-                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/MainPage.php">Accueil</a></li>
-                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/caaapa.php">L'équipe</a></li>
-                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/contact.php">Contact</a></li>
-                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/faq.php">FAQ</a></li>
-                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/cartographie.php">Cartographie</a></li>
-                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/statsetdonnees.php">Statistiques</a></li>
-                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/pierrito.php" class="pierrito">Pierrito Game<span><img src="../IMAGES/pierrito.png"/></span></a></li>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/PHP/MainPage.php">Accueil</a></li>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/PHP/caaapa.php">L'équipe</a></li>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/PHP/contact.php">Contact</a></li>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/PHP/faq.php">FAQ</a></li>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/PHP/cartographie.php">Cartographie</a></li>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/PHP/statsetdonnees.php">Statistiques</a></li>
+                    </li><a href="https://greenroad-g3b.herogu.garageisep.com/PHP/pierrito.php" class="pierrito">Pierrito Game<span><img src="../IMAGES/pierrito.png"/></span></a></li>
                 </ul>
             </div>
 
@@ -90,7 +90,7 @@ if (!empty($_POST)) {
             <div class="content">
 
                 <div class="imagegauche">
-                    <img src="https://greenroad-g3b.herogu.garageisep.com/imagetoits.webp">
+                    <img src="https://greenroad-g3b.herogu.garageisep.com/IMAGES/imagetoits.webp">
                 </div>
 
                 <div class="textedroite">
