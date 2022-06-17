@@ -43,7 +43,7 @@ if (!empty($_POST)) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> GreenRoad</title>
-        <link rel="stylesheet" href="https://greenroad-g3b.herogu.garageisep.com/CSS/MainPage.css?v=<?php echo time(); ?>"> 
+        <link rel="stylesheet" href="https://greenroad-g3b.herogu.garageisep.com/MainPage.css?v=<?php echo time(); ?>"> 
     </head>
 
 
