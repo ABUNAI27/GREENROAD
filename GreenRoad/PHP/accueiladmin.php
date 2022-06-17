@@ -44,16 +44,16 @@ $users = $statement->fetch_all(MYSQLI_ASSOC);
 
         
         <nav>
-            <a href="../php/MainPage.php">
+            <a href="../PHP/accueiladmin.php">
                 <img src="../IMAGES/GreenRoad.gif">
             </a>
             <h1>GreenRoad - Espace Administrateur</h1>
             <div class="onglets">
                 <ul>
-                    </li><u><a href="../php/accueiladmin.php">Accueil</a></u></li>
-                    </li><a href="../php/adminusers.php">Gestion utilisateurs</a></li>
-                    </li><a href="../php/admincapteurs.php">Gestion capteurs</a></li>
-                    </li><a href="../php/adminfaq.php">Gestion FAQ</a></li>
+                    </li><u><a href="../PHP/accueiladmin.php">Accueil</a></u></li>
+                    </li><a href="../PHP/adminusers.php">Gestion utilisateurs</a></li>
+                    </li><a href="../PHP/admincapteurs.php">Gestion capteurs</a></li>
+                    </li><a href="../PHP/adminfaq.php">Gestion FAQ</a></li>
                 </ul>
             </div>
         </nav>
