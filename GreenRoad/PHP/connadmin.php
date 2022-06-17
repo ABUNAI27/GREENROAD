@@ -84,12 +84,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo "Oups!Quelque chose s'est mal passé.Veuillez réessayer plus tard.";
             }
 
-            // Déclaration de fermeture
-            mysqli_stmt_close($stmt);
         }
     }
     
-    mysqli_close($db);
 }
 
 
@@ -153,7 +150,7 @@ if($stmt -> execute()){
 <body>
     
     <nav>
-        <a href="../php/MainPage.php">
+        <a href="../PHP/accueiladmin.php">
             <img src="../IMAGES/GreenRoad.gif">
         </a>
         <h1>GreenRoad</h1>
