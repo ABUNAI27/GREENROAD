@@ -29,19 +29,19 @@
     </section>
 
     <nav>
-        <a href="../php/MainPage.php">
+        <a href="../PHP/MainPage.php">
             <img src="../IMAGES/GreenRoad.png">
         </a>
         <h1>GreenRoad</h1>
         <div class="onglets">
             <ul>
-                </li><a href="../php/MainPage.php">Accueil</a></li>
-                </li><u><a href="../php/caaapa.php">L'équipe</a></u></li>
-                </li><a href="../php/contact.php">Contact</a></li>
-                </li><a href="../php/faq.php">FAQ</a></li>
-                </li><a href="../php/cartographie.php">Cartographie</a></li>
-                </li><a href="../php/statsetdonnees.php">Statistiques</a></li>
-                </li><a href="../php/pierrito.php" class="pierrito">Pierrito Game<span><img src="../IMAGES/pierrito.png"/></span></a></li>
+                </li><a href="../PHP/MainPage.php">Accueil</a></li>
+                </li><u><a href="../PHP/caaapa.php">L'équipe</a></u></li>
+                </li><a href="../PHP/contact.php">Contact</a></li>
+                </li><a href="../PHP/faq.php">FAQ</a></li>
+                </li><a href="../PHP/cartographie.php">Cartographie</a></li>
+                </li><a href="../PHP/statsetdonnees.php">Statistiques</a></li>
+                </li><a href="../PHP/pierrito.php" class="pierrito">Pierrito Game<span><img src="../IMAGES/pierrito.png"/></span></a></li>
             </ul>
         </div>
 
@@ -70,21 +70,21 @@
               <a href="https://www.linkedin.com/in/ayah-al-mutwaly/" target="_blank" class="profile">
                 <h2 class="profile__name">Ayah AL MUTWALY</h2>
                 <p></p>
-                <img src="../images/ayah.jpg" />
+                <img src="../IMAGES/ayah.jpg" />
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/achraf-jalal/" target="_blank" class="profile">
                 <h2 class="profile__name">Achraf JALAL</h2>
                 <p></p>
-                <img src="../images/achraf.jpg" />
+                <img src="../IMAGES/achraf.jpg" />
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/capucine-barr%C3%A9/" target="_blank" class="profile">
                 <h2 class="profile__name">Capucine BARRÉ</h2>
                 <p></p>
-                <img src="../images/capucine.png" />
+                <img src="../IMAGES/capucine.png" />
               </a>
             </li>
             <li>
@@ -98,14 +98,14 @@
               <a href="" target="_blank" class="profile">
                 <h2 class="profile__name">Arthur TOTAL</h2>
                 <p></p>
-                <img src="../images/arthur.jpg" />
+                <img src="../IMAGES/arthur.jpg" />
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/adil-lazar/" target="_blank" class="profile">
                 <h2 class="profile__name">Adil LAZAR</h2>
                 <p></p>
-                <img src="../images/adil.jfif" />
+                <img src="../IMAGES/adil.jfif" />
               </a>
             </li>
           </ul>
