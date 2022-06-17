@@ -85,12 +85,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
 
             // Déclaration de fermeture
-            mysqli_stmt_close($stmt);
         }
     }
     
     // Fermer la connexion
-    mysqli_close($db);
 }
 
 
