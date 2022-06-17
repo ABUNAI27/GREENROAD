@@ -1,4 +1,4 @@
 <?php
-  header('Location: MainPage.php');
+  header('Location: PHP/MainPage.php');
   exit();
 ?>
