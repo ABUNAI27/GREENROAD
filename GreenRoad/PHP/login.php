@@ -95,11 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 // Enregistrement de la connexion dans les logs
-$db = mysqli_connect("localhost", "root", "", "greenroad");
-if(!$db) {
-    echo "Connexion non établie.";
-    exit;
-}
+include_once('config.php');
 
 //Récupération de l'IP
 function getIp(){
