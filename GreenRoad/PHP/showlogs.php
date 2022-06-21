@@ -80,39 +80,56 @@ list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
 sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
 echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
 
+$data_tab =str_split($data,33);
+$data_tab_reverse = array_reverse ( $data_tab);
+echo ("
+<table>
+          <tr>
+            <th>Type de trame</th>
+            <th>Numéro d'équipe</th>
+            <th>Type de requête</th>
+            <th>Type de capteur</th>
+            <th>Numéro de capteur</th>
+            <th>Valeur du capteur</th>
+            <th>Numéro de trame</th>
+            <th>Checksum</th>
+            <th>Temps</th>
+          </tr>
+     ");
+
+$stop = 0;
+foreach ($data_tab_reverse as $key=>$elm){
+    $trame = $data_tab[$key];
+
+// décodage avec sscanf
+    list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
+        sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
+    echo("
+
+          <tr>
+            <td>$t</td>
+            <td>$o</td>
+            <td>$r</td>
+            <td>$c</td>
+            <td>$n</td>
+            <td>$v</td>
+            <td>$a</td>
+            <td>$x</td>
+            <td>$year,$month,$day,$hour,$min,$sec</td>
+            </tr>
+
+    ");
+    $stop++;
+    if($stop>=$limit){
+        break;
+    }
+
+
+}
+echo (" </table>");
+
 ?>
-<form action="" method="post">
 
-<input type="submit" class="boutonLED" name="submit" value="Allumer la led rouge">
-<input type="submit" class="boutonLED" name="submit2" value="Allumer la led bleue">
-<input type="submit" class="boutonLED" name="submit3" value="Eteindre la led">
-</form>
-<?php
-
-if(isset($_POST['submit'])) {
-
-        //$monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3B1&TRAME=1G3B141425411425687423";   definir trame
-
-        header("Location: $monUrl");
-        exit;
-}
-
-if(isset($_POST['submit2'])) {
-
-    //$monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3B1&TRAME=1G3B131425411425687423";   definir trame
-
-    header("Location: $monUrl");
-    exit;
-}
-
-if(isset($_POST['submit3'])) {
-
-    //$monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3B1&TRAME=1G3B151425411425687423";   definir trame
-
-    header("Location: $monUrl");
-    exit;
-}
-?>
 </body>
 
 <!--Footer-->
