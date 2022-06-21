@@ -59,17 +59,17 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 $data = curl_exec($ch);
 curl_close($ch);
 
-
+//Affiche en brut les trames reçues depuis le serveur
 echo "Raw Data:<br />";
 echo("$data");
 
-
-$data_tab = str_split($data,33);
+//Affiche les trames reçues depuis le serveur en sautant une ligne pour chaque trame (1 trame = 33 caractères)$data_tab = str_split($data,33);
 echo "Tabular Data:<br />";
 for($i=0, $size=count($data_tab); $i<$size; $i++){
     echo "Trame $i: $data_tab[$i]<br />";
 }
 
+//Affiche le décodage d'une trame
 $trame = $data_tab[1];
 // décodage avec des substring
 $t = substr($trame,0,1);
@@ -79,6 +79,8 @@ $o = substr($trame,1,4);
 list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
 sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
 echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
+
+//Affiche chaque trames dans un tableau
 
 $data_tab =str_split($data,33);
 $data_tab_reverse = array_reverse ( $data_tab);
