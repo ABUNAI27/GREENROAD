@@ -80,9 +80,9 @@ echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
 ?>
 <form action="" method="post">
 
-<input type="submit" class="bouton colorJaune" name="submit" value="Allumer la led rouge">
-<input type="submit" class="bouton colorJaune" name="submit2" value="Allumer la led bleue">
-<input type="submit" class="bouton colorJaune" name="submit3" value="Eteindre la led">
+<input type="submit" class="boutonLED" name="submit" value="Allumer la led rouge">
+<input type="submit" class="boutonLED" name="submit2" value="Allumer la led bleue">
+<input type="submit" class="boutonLED" name="submit3" value="Eteindre la led">
 </form>
 <?php
 
