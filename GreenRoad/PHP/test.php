@@ -60,17 +60,14 @@ $data = curl_exec($ch);
 curl_close($ch);
 
 
-function viewOriginalLog ($data) {
-    echo "Raw Data:<br />";
-    echo("$data");
-}
+echo "Raw Data:<br />";
+echo("$data");
 
-function viewTabLogs ($data){
-    $data_tab = str_split($data,33);
-    echo "Tabular Data:<br />";
-    for($i=0, $size=count($data_tab); $i<$size; $i++){
-        echo "Trame $i: $data_tab[$i]<br />";
-    }
+
+$data_tab = str_split($data,33);
+echo "Tabular Data:<br />";
+for($i=0, $size=count($data_tab); $i<$size; $i++){
+    echo "Trame $i: $data_tab[$i]<br />";
 }
 
 $trame = $data_tab[1];
