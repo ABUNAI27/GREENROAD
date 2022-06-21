@@ -3,7 +3,33 @@
     session_start();
 ?>
 
-<?php
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GreenRoad</title>
+    <link rel="stylesheet" href="../CSS/contact.css?v=<?php echo time(); ?>"> 
+</head>
+
+
+<body>
+    <section class="login">
+        <?php
+        
+            if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+                echo "<a class=\"btn1\" href=\"../PHP/register.php\">Inscription</a>";
+                echo "<a class=\"btn2\" href=\"../PHP/login.php\">Connexion</a>";
+            }else{
+                echo "<a href=\"../PHP/userpage.php\"><img src=\"../images/profillogo.png\"></a>";
+                echo "<a class=\"btn3\" href=\"../PHP/logout.php\" >Déconnexion</a>";
+
+            }
+        ?>
+
+    </section>
+    <?php
 $ch = curl_init();
 curl_setopt(
 $ch,
@@ -32,34 +58,39 @@ list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
 sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
 echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
 
-
 ?>
+<form action="" method="post">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> GreenRoad</title>
-    <link rel="stylesheet" href="../CSS/contact.css?v=<?php echo time(); ?>"> 
-</head>
+<input type="submit" class="bouton colorJaune" name="submit" value="Allumer la led rouge">
+<input type="submit" class="bouton colorJaune" name="submit2" value="Allumer la led bleue">
+<input type="submit" class="bouton colorJaune" name="submit3" value="Eteindre la led">
+</form>
+<?php
 
+if(isset($_POST['submit'])) {
 
-<body>
-    <section class="login">
-        <?php
-        
-            if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-                echo "<a class=\"btn1\" href=\"../PHP/register.php\">Inscription</a>";
-                echo "<a class=\"btn2\" href=\"../PHP/login.php\">Connexion</a>";
-            }else{
-                echo "<a href=\"../PHP/userpage.php\"><img src=\"../images/profillogo.png\"></a>";
-                echo "<a class=\"btn3\" href=\"../PHP/logout.php\" >Déconnexion</a>";
+        //$monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3B1&TRAME=1G3B141425411425687423";   definir trame
 
-            }
-        ?>
+        header("Location: $monUrl");
+        exit;
+}
 
-    </section>
+if(isset($_POST['submit2'])) {
+
+    //$monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3B1&TRAME=1G3B131425411425687423";   definir trame
+
+    header("Location: $monUrl");
+    exit;
+}
+
+if(isset($_POST['submit3'])) {
+
+    //$monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3B1&TRAME=1G3B151425411425687423";   definir trame
+
+    header("Location: $monUrl");
+    exit;
+}
+?>
     <nav>
         <a href="../php/MainPage.php">
             <img src="../IMAGES/GreenRoad.gif">
