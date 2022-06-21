@@ -29,6 +29,25 @@
         ?>
 
     </section>
+
+    <nav>
+        <a href="../php/MainPage.php">
+            <img src="../IMAGES/GreenRoad.gif">
+        </a>
+        <h1>GreenRoad</h1>
+        <div class="onglets">
+            <ul>
+                </li><a href="../php/MainPage.php">Accueil</a></li>
+                </li><a href="../php/caaapa.php">L'équipe</a></li>
+                </li><u><a href="../php/contact.php">Contact</a></u></li>
+                </li><a href="../php/faq.php">FAQ</a></li>
+                </li><a href="../php/cartographie.php">Cartographie</a></li>
+                </li><a href="../php/statsetdonnees.php">Statistiques</a></li>
+                </li><a href="../php/pierrito.php" class="pierrito">Pierrito Game<span><img src="../IMAGES/pierrito.png"/></span></a></li>
+            </ul>
+        </div>
+
+    </nav>
     <?php
 $ch = curl_init();
 curl_setopt(
@@ -91,25 +110,6 @@ if(isset($_POST['submit3'])) {
     exit;
 }
 ?>
-    <nav>
-        <a href="../php/MainPage.php">
-            <img src="../IMAGES/GreenRoad.gif">
-        </a>
-        <h1>GreenRoad</h1>
-        <div class="onglets">
-            <ul>
-                </li><a href="../php/MainPage.php">Accueil</a></li>
-                </li><a href="../php/caaapa.php">L'équipe</a></li>
-                </li><u><a href="../php/contact.php">Contact</a></u></li>
-                </li><a href="../php/faq.php">FAQ</a></li>
-                </li><a href="../php/cartographie.php">Cartographie</a></li>
-                </li><a href="../php/statsetdonnees.php">Statistiques</a></li>
-                </li><a href="../php/pierrito.php" class="pierrito">Pierrito Game<span><img src="../IMAGES/pierrito.png"/></span></a></li>
-            </ul>
-        </div>
-
-    </nav>
-
 </body>
 
 <!--Footer-->
