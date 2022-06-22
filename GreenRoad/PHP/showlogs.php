@@ -135,7 +135,6 @@ for ($key = 0; $key < var_dump(count($data_tab)); $key++){
             <th>Checksum</th>
             <th>Temps</th>
           </tr>
-     ");
 
     ");
     
