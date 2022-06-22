@@ -123,6 +123,19 @@ for ($key = 0; $key < var_dump(count($data_tab)); $key++){
             <td>$x</td>
             <td>$year,$month,$day,$espace,$hour,$min,$sec</td>
           </tr>
+          
+          <tr>
+            <th>Type de trame</th>
+            <th>Numéro d'équipe</th>
+            <th>Type de requête</th>
+            <th>Type de capteur</th>
+            <th>Numéro de capteur</th>
+            <th>Valeur du capteur</th>
+            <th>Numéro de trame</th>
+            <th>Checksum</th>
+            <th>Temps</th>
+          </tr>
+     ");
 
     ");
     
