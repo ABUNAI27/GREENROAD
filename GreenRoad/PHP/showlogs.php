@@ -101,7 +101,7 @@ echo ("
      ");
 
 //var_dump(count($data_tab)
-for ($key = 0; $key < 10); $key++){
+for ($key = 0; $key < 10; $key++){
     $trame = $data_tab[$key];
     $t = substr($trame,0,1);
     $o = substr($trame,1,4);
