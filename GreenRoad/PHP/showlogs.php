@@ -102,7 +102,9 @@ echo ("
 
 $stop = 0;
 for ($key = 0; $key < var_dump(count($data_tab_reverse)); $key++){
-    $trame = $data_tab[$key];
+    $trame = $data_tab_reverse[$key];
+    $t = substr($trame,0,1);
+    $o = substr($trame,1,4);
 
 // décodage avec sscanf
     list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
