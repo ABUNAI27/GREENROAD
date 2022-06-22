@@ -101,7 +101,7 @@ echo ("
      ");
 
 //var_dump(count($data_tab)
-for ($key = 0; $key < 10; $key++){
+for ($key = 0; $key < sizeof($data_tab); $key++){
     $trame = $data_tab[$key];
     $t = substr($trame,0,1);
     $o = substr($trame,1,4);
@@ -111,7 +111,6 @@ for ($key = 0; $key < 10; $key++){
         sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
     $espace = " ";
     echo("
-
           <tr>
             <td>$t</td>
             <td>$o</td>
@@ -123,19 +122,6 @@ for ($key = 0; $key < 10; $key++){
             <td>$x</td>
             <td>$year,$month,$day,$espace,$hour,$min,$sec</td>
           </tr>
-          
-          <tr>
-            <th>Type de trame</th>
-            <th>Numéro d'équipe</th>
-            <th>Type de requête</th>
-            <th>Type de capteur</th>
-            <th>Numéro de capteur</th>
-            <th>Valeur du capteur</th>
-            <th>Numéro de trame</th>
-            <th>Checksum</th>
-            <th>Temps</th>
-          </tr>
-
     ");
     
 }
