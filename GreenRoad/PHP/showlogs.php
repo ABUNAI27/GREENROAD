@@ -101,12 +101,13 @@ echo ("
      ");
 
 $stop = 0;
-foreach ($data_tab_reverse as $key){
+for ($key = 0; $key < var_dump(count($data_tab_reverse)); $key++){
     $trame = $data_tab[$key];
 
 // décodage avec sscanf
     list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
         sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
+    $espace = " ";
     echo("
 
           <tr>
@@ -118,16 +119,11 @@ foreach ($data_tab_reverse as $key){
             <td>$v</td>
             <td>$a</td>
             <td>$x</td>
-            <td>$year,$month,$day,$hour,$min,$sec</td>
-            </tr>
+            <td>$year,$month,$day,$espace,$hour,$min,$sec</td>
+          </tr>
 
     ");
-    $stop++;
-    /*if($stop>=var_dump(count($data_tab_reverse))){
-        break;
-    }*/
-
-
+    
 }
 echo (" </table>");
 
