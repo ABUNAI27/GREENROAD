@@ -123,9 +123,9 @@ foreach ($data_tab_reverse as $key){
 
     ");
     $stop++;
-    if($stop>=var_dump(count($data_tab_reverse))){
+    /*if($stop>=var_dump(count($data_tab_reverse))){
         break;
-    }
+    }*/
 
 
 }
