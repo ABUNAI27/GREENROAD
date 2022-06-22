@@ -101,7 +101,7 @@ echo ("
      ");
 
 $stop = 0;
-foreach ($data_tab_reverse as $key=>$elm){
+foreach ($data_tab_reverse as $key){
     $trame = $data_tab[$key];
 
 // décodage avec sscanf
