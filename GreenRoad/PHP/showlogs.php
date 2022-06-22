@@ -123,7 +123,7 @@ foreach ($data_tab_reverse as $key=>$elm){
 
     ");
     $stop++;
-    if($stop>=$limit){
+    if($stop>=var_dump(count($data_tab){
         break;
     }
 
