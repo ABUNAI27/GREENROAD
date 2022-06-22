@@ -64,9 +64,10 @@ echo "Raw Data:<br />";
 echo("$data");
 
 //Affiche les trames reçues depuis le serveur en sautant une ligne pour chaque trame (1 trame = 33 caractères)$data_tab = str_split($data,33);
+$data_tab = str_split($data,33);
 echo "Tabular Data:<br />";
 for($i=0, $size=count($data_tab); $i<$size; $i++){
-    echo "Trame $i: $data_tab[$i]<br />";
+echo "Trame $i: $data_tab[$i]<br />";
 }
 
 //Affiche le décodage d'une trame
