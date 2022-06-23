@@ -114,12 +114,8 @@
                     $query->bindParam(':datetime',$date);
                     $query->execute();*/
                     $stmt = $db->prepare("INSERT INTO donneesapp(valeur,idCapteur,jour,mois,annee,heure,minute,seconde) VALUES(?,?,?,?,?,?,?,?)");
-                    $stmt -> bindParam('iiiiiiii', $valeur, $capteur, $day, $month, $year, $hour, $min, $sec);
-                    if($stmt -> execute()){
-                      echo ("Bienvenue chez GreenRoad !");
-                    }else{
-                      print $db->error;
-                    }
+                    $stmt -> bind_param("iiiiiiii", $valeur, $capteur, $day, $month, $year, $hour, $min, $sec);
+                    $stmt -> execute();
                 }
                 
             }
