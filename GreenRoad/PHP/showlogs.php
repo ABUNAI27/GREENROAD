@@ -1,6 +1,7 @@
 <?php
 
     session_start();
+    include_once('config.php');
 ?>
 
 
@@ -124,6 +125,10 @@ for ($key = 0; $key < sizeof($data_tab); $key++){
             <td>$year,$month,$day,$espace,$hour,$min,$sec</td>
           </tr>
     ");
+    $date = $year + $month + $day + $hour + $min + $sec ;
+    $stmt = $db->prepare("INSERT INTO users(donnee,date,idCapteur) VALUES(?, ?, 1)");
+    $stmt -> bind_param('ss', $valeur, $date);
+    $stmt -> execute();
     
 }
 echo (" </table>");
