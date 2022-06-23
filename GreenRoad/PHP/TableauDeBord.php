@@ -150,11 +150,10 @@
                     exit;
                     if(isset($_POST['submit3'])) {
 
-                        $monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3-A&TRAME=1G3-ACCCCCCCCC";  
+                    $monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3-A&TRAME=1G3-ACCCCCCCCC";  
 
-                        header("Location: $monUrl");
-                        exit;
-                        }
+                    header("Location: $monUrl");
+                    exit;
                     }
                     if(isset($_POST['submit4'])) {
 
