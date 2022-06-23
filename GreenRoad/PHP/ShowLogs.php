@@ -90,6 +90,7 @@
                     sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
                 $espace = " ";
                 $valeur = hexdec($v);
+                $date = mktime($hour,$min,$sec,$month,$day,$year);
                 echo("
                     <tr>
                         <td>$t</td>
@@ -100,7 +101,7 @@
                         <td>$valeur</td>
                         <td>$a</td>
                         <td>$x</td>
-                        <td>$year,$month,$day,$espace,$hour,$min,$sec</td>
+                        <td>$date</td>
                     </tr>
                 ");
                 
