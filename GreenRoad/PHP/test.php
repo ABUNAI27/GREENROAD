@@ -90,7 +90,7 @@
                     sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
                 $espace = " ";
                 $valeur = hexdec($v);
-                $date = date('c',mktime($hour,$min,$sec,$month,$day,$year));
+                $date = date("Y-m-d H:i:s",mktime($hour,$min,$sec,$month,$day,$year));
                 echo("
                     <tr>
                         <td>$t</td>
