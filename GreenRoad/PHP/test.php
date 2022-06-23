@@ -81,7 +81,7 @@
                 ");
 
             //var_dump(count($data_tab)
-            for ($key = 1; $key < 51; $key++){
+            for ($key = 1; $key < sizeof($data_tab_reverse); $key++){
                 $capteur = 1;
                 $trame = $data_tab_reverse[$key];
                 $t = substr($trame,0,1);
@@ -112,7 +112,6 @@
                 $resultat = $count['NumRows'] ;
                 
                 if($resultat == 0){
-                    echo("hey");
                     /*$query = $db->prepare("INSERT INTO donnees (donnee, date, idCapteur) VALUES(:value,:datetime,1)");
                     $query->bindParam(':value',$valeur);
                     $query->bindParam(':datetime',$date);
