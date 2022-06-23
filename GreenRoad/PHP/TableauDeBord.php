@@ -131,6 +131,7 @@
                 <input type="submit" class="boutonLED" name="submit7" value="Allumer la led Blanc" style="background-color:white">
                 <input type="submit" class="boutonLED" name="submit8" value="Eteindre la led">
             </form>
+            
             <?php
 
                 if(isset($_POST['submit'])) {
@@ -190,10 +191,6 @@
                         header("Location: $monUrl");
                         exit;
                     }
-
-
-                
-
             ?>
         </div>
         <div class="Données-brutes">
