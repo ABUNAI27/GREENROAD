@@ -116,6 +116,7 @@
                     $stmt = $db->prepare('INSERT INTO donneeapp (valeur,idCapteur,jour,mois,annee,heure,minute,seconde) VALUES (?,?,?,?,?,?,?,?)'); //?,?,?,?,?,?,?,? i,i,i,i,i,i,i,i
                     $stmt -> bindParam("iiii iiii", 1,1,1,1, 1,1,1,1); //$valeur, $capteur, $day, $month, $year, $hour, $min, $sec
                     $stmt -> execute();
+                    $stmt->store_result();
                 }
                 
             }
