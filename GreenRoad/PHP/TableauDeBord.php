@@ -106,6 +106,7 @@
                 
             }
             echo (" </table>");
+            exit;
 
         ?>
         </div>
