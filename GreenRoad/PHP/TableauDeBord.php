@@ -190,6 +190,8 @@
                         header("Location: $monUrl");
                         exit;
                     }
+                }
+
             ?>
         </div>
         <div class="Données-brutes">
