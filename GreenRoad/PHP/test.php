@@ -9,7 +9,7 @@
     $resultatdelete = $countdelete['NumRows'] ;
     
     if($resultatdelete >= 400){
-        $delete = $db -> query("DELETE FROM donneeapp LIMIT 10")
+        $delete = $db -> query("DELETE FROM donneeapp LIMIT 10");
     }
 
 ?>
