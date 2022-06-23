@@ -110,7 +110,7 @@
                 $resultat = $db -> query("SELECT COUNT(*) FROM donneeapp WHERE capteur = '$capteur' AND jour = '$day' AND mois = '$month' AND annee = '$year' AND heure = '$hour' AND minute = '$min' AND seconde = '$sec'");
                 
                 
-                if($resultat > 0){
+                if($resultat == 0){
                     echo("hey");
                     /*$query = $db->prepare("INSERT INTO donnees (donnee, date, idCapteur) VALUES(:value,:datetime,1)");
                     $query->bindParam(':value',$valeur);
