@@ -106,8 +106,8 @@
                         <td>$date</td>
                     </tr>
                 ");
-                
-                $countresult = $db -> query("SELECT COUNT(*) FROM donneeapp AS NumRows WHERE idcapteur = '$capteur' AND jour = '$day' AND mois = '$month' AND annee = '$year' AND heure = '$hour' AND minute = '$min' AND seconde = '$sec'");
+                $resultat = 0;
+                $countresult = $db -> query("SELECT COUNT(*) AS NumRows FROM donneeapp WHERE idcapteur = '$capteur' AND jour = '$day' AND mois = '$month' AND annee = '$year' AND heure = '$hour' AND minute = '$min' AND seconde = '$sec'");
                 $count = $countresult->fetch_assoc();               
                 $resultat = $count['NumRows'] ;
                 
