@@ -109,17 +109,17 @@
                 if($key==2){
                     echo("hey");
                     $capteur = 1;
-                    $query = $db->prepare("INSERT INTO donnees (donnee, date, idCapteur) VALUES(:value,:datetime,1)");
+                    /*$query = $db->prepare("INSERT INTO donnees (donnee, date, idCapteur) VALUES(:value,:datetime,1)");
                     $query->bindParam(':value',$valeur);
                     $query->bindParam(':datetime',$date);
-                    $query->execute();
-                    /*$stmt = $db->prepare("INSERT INTO donneesapp(valeur,idCapteur,jour,mois,annee,heure,minute,seconde) VALUES(?,?,?,?,?,?,?,?)");
-                    $stmt -> bind_param('iiiiiiii', $valeur, $capteur, $day, $month, $year, $hour, $min, $sec);
+                    $query->execute();*/
+                    $stmt = $db->prepare("INSERT INTO donneesapp(valeur,idCapteur,jour,mois,annee,heure,minute,seconde) VALUES(?,?,?,?,?,?,?,?)");
+                    $stmt -> bindParam('iiiiiiii', $valeur, $capteur, $day, $month, $year, $hour, $min, $sec);
                     if($stmt -> execute()){
                       echo ("Bienvenue chez GreenRoad !");
                     }else{
                       print $db->error;
-                    }*/
+                    }
                 }
                 
             }
