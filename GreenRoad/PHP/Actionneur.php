@@ -48,36 +48,6 @@
         </div>
 
     </nav>
- <?php
-    $ch = curl_init();
-    curl_setopt(
-    $ch,
-    CURLOPT_URL,
-    "http://projets-tomcat.isep.fr:8080/appService/?ACTION=GETLOG&TEAM=G3-B");
-    curl_setopt($ch, CURLOPT_HEADER, FALSE);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-    $data = curl_exec($ch);
-    curl_close($ch);
-?>
-<div class="container">
-  <div class="Données-brutes">
-        <?php 
-            echo "Raw Data:<br />";
-            echo("$data");
-        ?>
-    
-  </div>
-  <div class="Trames">
-    <?php
-    $data_tab = str_split($data,33);
-    echo "Tabular Data:<br />";
-    for($i=0, $size=count($data_tab); $i<$size; $i++){
-    echo "Trame $i: $data_tab[$i]<br />";
-    }
-    ?>
-  </div>
-  <div class="Tableau"></div>
-  <div class="Actionneurs-LED">
     <form action="" method="post">
         <input type="submit" class="boutonLED" name="submit" value="Allumer la led Bleue" style="background-color:blue;color:white">
         <input type="submit" class="boutonLED" name="submit2" value="Allumer la led Rouge" style="background-color:red;color:white">
@@ -149,10 +119,7 @@ if(isset($_POST['submit8'])) {
     exit;
 }
 ?>
-  </div>
-  <div class="Graphique"></div>
-  <div class="Données-en-direct"></div>
-</div>
+
 
 </body>
 
