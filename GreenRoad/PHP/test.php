@@ -113,8 +113,8 @@
                     $query->bindParam(':value',$valeur);
                     $query->bindParam(':datetime',$date);
                     $query->execute();*/
-                    $stmt = $db->prepare("INSERT INTO donneesapp(valeur,idCapteur,jour,mois,annee,heure,minute,seconde) VALUES(?,?,?,?,?,?,?,?)");
-                    $stmt -> bind_param("iiiiiiii", $valeur, $capteur, $day, $month, $year, $hour, $min, $sec);
+                    $stmt = $db->prepare("INSERT INTO donneesapp(valeur,idCapteur,jour,mois,annee,heure,minute,seconde) VALUES(1,1,1,1,1,1,1)");
+                    //$stmt -> bind_param("iiiiiiii", $valeur, $capteur, $day, $month, $year, $hour, $min, $sec);
                     $stmt -> execute();
                 }
                 
