@@ -2,6 +2,16 @@
 
     session_start();
     include_once('config.php');
+
+    //Supprimer 200 lignes de la BDD dès que ça dépasse 1000
+    $countresultdelete = $db -> query("SELECT COUNT(*) AS NumRows FROM donneeapp");
+    $countdelete = $countresultdelete -> fetch_assoc();               
+    $resultatdelete = $countdelete['NumRows'] ;
+    
+    if($resultatdelete >= 700){
+        $delete = $db -> query("DELETE FROM donneeapp LIMIT 10")
+    }
+
 ?>
 
 
