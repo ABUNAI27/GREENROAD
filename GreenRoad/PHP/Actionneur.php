@@ -61,10 +61,21 @@
 ?>
 <div class="container">
   <div class="Données-brutes">
-    
+        <?php 
+            echo "Raw Data:<br />";
+            echo("$data");
+        ?>
     
   </div>
-  <div class="Trames"></div>
+  <div class="Trames">
+    <?php
+    $data_tab = str_split($data,33);
+    echo "Tabular Data:<br />";
+    for($i=0, $size=count($data_tab); $i<$size; $i++){
+    echo "Trame $i: $data_tab[$i]<br />";
+    }
+    ?>
+  </div>
   <div class="Tableau"></div>
   <div class="Actionneurs-LED">
     <form action="" method="post">
