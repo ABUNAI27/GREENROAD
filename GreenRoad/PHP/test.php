@@ -111,7 +111,7 @@
                     $stmt = $db->prepare("INSERT INTO donnees(donnee,date,idCapteur) VALUES('$valeur','$date',1)");
                     //$stmt -> bind_param('sss', $valeur, $date);
                     if($stmt -> execute()){
-                      echo "Bienvenue chez GreenRoad "!";
+                      echo ("Bienvenue chez GreenRoad !");
                     }else{
                       print $db->error;
                     }
