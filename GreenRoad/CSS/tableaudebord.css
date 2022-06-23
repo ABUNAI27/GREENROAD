@@ -154,6 +154,7 @@ nav .onglets a:hover {
 }
 
 .Tableau { grid-area: Tableau; 
+    border: 1px solid #fff;
     overflow: auto;
     height: 300px;
     display: flex;
@@ -161,17 +162,25 @@ nav .onglets a:hover {
 }
 
 .Trames { grid-area: Trames; 
+    border: 1px solid #fff;
     overflow: auto;
     height: 300px;
 }
 
-.Graphique { grid-area: Graphique; }
+.Graphique { grid-area: Graphique;
+  border: 1px solid #fff;
+}
 
-.Données-capteurs-en-direct { grid-area: Données-capteurs-en-direct; }
+.Données-capteurs-en-direct { grid-area: Données-capteurs-en-direct; 
+  border: 1px solid #fff;
+}
 
-.Controle-LED { grid-area: Controle-LED; }
+.Controle-LED { grid-area: Controle-LED; 
+  border: 1px solid #fff;
+}
 
 .Données-brutes { grid-area: Données-brutes; 
+    border: 1px solid #fff;
     overflow: auto;
     height: 300px;
 }
