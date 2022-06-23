@@ -107,7 +107,7 @@
                     </tr>
                 ");
                 
-                $resultat = mysql_query("SELECT COUNT(*) FROM donneeapp WHERE capteur = '$capteur' AND jour = '$day' AND mois = '$month' AND annee = '$year' AND heure = '$hour' AND minute = '$min' AND seconde = '$sec'");
+                $resultat = $db -> query("SELECT COUNT(*) FROM donneeapp WHERE capteur = '$capteur' AND jour = '$day' AND mois = '$month' AND annee = '$year' AND heure = '$hour' AND minute = '$min' AND seconde = '$sec'");
                 
                 
                 if($resultat > 0){
