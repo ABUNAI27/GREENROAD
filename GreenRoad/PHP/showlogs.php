@@ -126,9 +126,10 @@ for ($key = 0; $key < sizeof($data_tab); $key++){
           </tr>
     ");
     $date = $year + $month + $day + $hour + $min + $sec ;
-    $stmt = $db->prepare("INSERT INTO users(donnee,date,idCapteur) VALUES(?, ?, 1)");
+    echo("$date");
+    /*$stmt = $db->prepare("INSERT INTO users(donnee,date,idCapteur) VALUES(?, ?, 1)");
     $stmt -> bind_param('ss', $valeur, $date);
-    $stmt -> execute();
+    $stmt -> execute();*/
     
 }
 echo (" </table>");
