@@ -1,6 +1,16 @@
 <?php
 
     session_start();
+    include_once('config.php');
+
+    //Supprimer 200 lignes de la BDD dès que ça dépasse 1000
+    $countresultdelete = $db -> query("SELECT COUNT(*) AS NumRows FROM donneeapp");
+    $countdelete = $countresultdelete -> fetch_assoc();               
+    $resultatdelete = $countdelete['NumRows'] ;
+    
+    if($resultatdelete >= 500){
+        $delete = $db -> query("DELETE FROM donneeapp LIMIT 50");
+    }
 ?>
 
 
@@ -80,8 +90,9 @@
                 ");
 
             //var_dump(count($data_tab)
-            for ($key = 0; $key < sizeof($data_tab); $key++){
-                $trame = $data_tab[$key];
+            for ($key = 0; $key < sizeof($data_tab_reverse); $key++){
+                $capteur = 1;
+                $trame = $data_tab_reverse[$key];
                 $t = substr($trame,0,1);
                 $o = substr($trame,1,4);
 
@@ -90,7 +101,7 @@
                     sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
                 $espace = " ";
                 $valeur = hexdec($v);
-                $date = mktime($hour,$min,$sec,$month,$day,$year);
+                $date = date("Y-m-d H:i:s",mktime($hour,$min,$sec,$month,$day,$year));
                 echo("
                     <tr>
                         <td>$t</td>
@@ -104,6 +115,22 @@
                         <td>$date</td>
                     </tr>
                 ");
+                $resultat = 0;
+                $countresult = $db -> query("SELECT COUNT(*) AS NumRows FROM donneeapp WHERE idcapteur = '$capteur' AND jour = '$day' AND mois = '$month' AND annee = '$year' AND heure = '$hour' AND minute = '$min' AND seconde = '$sec'");
+                $count = $countresult->fetch_assoc();               
+                $resultat = $count['NumRows'] ;
+                
+                if($resultat == 0){
+                    /*$query = $db->prepare("INSERT INTO donnees (donnee, date, idCapteur) VALUES(:value,:datetime,1)");
+                    $query->bindParam(':value',$valeur);
+                    $query->bindParam(':datetime',$date);
+                    $query->execute();*/
+                    $stmt = $db->prepare('INSERT INTO donneeapp (valeur,idCapteur,jour,mois,annee,heure,minute,seconde) VALUES (?,?,?,?,?,?,?,?)'); //?,?,?,?,?,?,?,? i,i,i,i,i,i,i,i
+                    
+                    $stmt -> bind_param("iiiiiiii", $valeur, $capteur, $day, $month, $year, $hour, $min, $sec); //$valeur, $capteur, $day, $month, $year, $hour, $min, $sec
+                    //1,1,1,1, 1,1,1,1
+                    $stmt -> execute();
+                }
                 
             }
             echo (" </table>");
