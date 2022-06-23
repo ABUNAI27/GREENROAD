@@ -112,7 +112,7 @@ for ($key = 0; $key < sizeof($data_tab); $key++){
         sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
     $espace = " ";
     $valeur = hexdec($v);
-    $date = date_create($year.$month.$day.$hour.$min.$sec);
+    $date = mktime($hour,$min,$sec,$month,$day,$year);
     echo("
           <tr>
             <td>$t</td>
