@@ -112,6 +112,7 @@ for ($key = 0; $key < sizeof($data_tab); $key++){
         sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
     $espace = " ";
     $valeur = hexdec($v);
+    $date = $year.$month.$day.$hour.$min.$sec;
     echo("
           <tr>
             <td>$t</td>
@@ -122,11 +123,10 @@ for ($key = 0; $key < sizeof($data_tab); $key++){
             <td>$valeur</td>
             <td>$a</td>
             <td>$x</td>
-            <td>$year,$month,$day,$espace,$hour,$min,$sec</td>
+            <td>$date</td>
           </tr>
     ");
-    $date = $year.$month.$day.$hour.$min.$sec ;
-    echo("$date");
+    
     /*$stmt = $db->prepare("INSERT INTO users(donnee,date,idCapteur) VALUES(?, ?, 1)");
     $stmt -> bind_param('ss', $valeur, $date);
     $stmt -> execute();*/
