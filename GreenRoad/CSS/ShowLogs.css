@@ -146,8 +146,8 @@ nav .onglets a:hover {
     gap: 20px 20px; 
     height: 100%;
     grid-template-areas:
-        "Données-brutes Graphique Données-capteurs-en-direct"
-        "Trames Controle-LED Controle-LED"
+        "Données-brutes Données-brutes Données-brutes"
+        "Trames Graphique Données-capteurs-en-direct"
         "Tableau Tableau Tableau";
     overflow: auto;
 
@@ -172,10 +172,6 @@ nav .onglets a:hover {
 }
 
 .Données-capteurs-en-direct { grid-area: Données-capteurs-en-direct; 
-  border: 1px solid #000;
-}
-
-.Controle-LED { grid-area: Controle-LED; 
   border: 1px solid #000;
 }
 
