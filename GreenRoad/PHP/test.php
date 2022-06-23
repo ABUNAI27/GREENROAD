@@ -82,6 +82,7 @@
 
             //var_dump(count($data_tab)
             for ($key = 1; $key < 51; $key++){
+                $capteur = 1;
                 $trame = $data_tab_reverse[$key];
                 $t = substr($trame,0,1);
                 $o = substr($trame,1,4);
@@ -106,9 +107,11 @@
                     </tr>
                 ");
                 
-                if($key==2){
+                $resultat = mysql_query("SELECT COUNT(*) FROM donneeapp WHERE capteur = '$capteur' AND jour = '$day' AND mois = '$month' AND annee = '$year' AND heure = '$hour' AND minute = '$min' AND seconde = '$sec'");
+                
+                
+                if($resultat > 0){
                     echo("hey");
-                    $capteur = 1;
                     /*$query = $db->prepare("INSERT INTO donnees (donnee, date, idCapteur) VALUES(:value,:datetime,1)");
                     $query->bindParam(':value',$valeur);
                     $query->bindParam(':datetime',$date);
