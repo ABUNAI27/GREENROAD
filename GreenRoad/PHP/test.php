@@ -108,8 +108,12 @@
                 
                 if($key==2){
                     $stmt = $db->prepare("INSERT INTO donnees(donnee,date,idCapteur) VALUES(?, ?, 1)");
-                    $stmt -> bind_param('ss', $valeur, $date);
-                    $stmt -> execute();
+                    $stmt -> bind_param('sss', $valeur, $date);
+                    if($stmt -> execute()){
+                      echo "Bienvenue chez GreenRoad " . $pseudo . "!";
+                    }else{
+                      print $db->error;
+                    }
                 }
                 
             }
