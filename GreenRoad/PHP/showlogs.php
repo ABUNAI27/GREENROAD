@@ -90,7 +90,7 @@
                 ");
 
             //var_dump(count($data_tab)
-            for ($key = 0; $key < sizeof($data_tab_reverse); $key++){
+            for ($key = 1; $key < sizeof($data_tab_reverse); $key++){
                 $capteur = 1;
                 $trame = $data_tab_reverse[$key];
                 $t = substr($trame,0,1);
