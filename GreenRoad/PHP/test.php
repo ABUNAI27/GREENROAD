@@ -1,6 +1,7 @@
 <?php
 
     session_start();
+    include_once('config.php');
 ?>
 
 
@@ -80,8 +81,8 @@
                 ");
 
             //var_dump(count($data_tab)
-            for ($key = 0; $key < sizeof($data_tab); $key++){
-                $trame = $data_tab[$key];
+            for ($key = 0; $key < 50; $key++){
+                $trame = $data_tab_reverse[$key];
                 $t = substr($trame,0,1);
                 $o = substr($trame,1,4);
 
@@ -105,8 +106,16 @@
                     </tr>
                 ");
                 
+                if($key==1){
+                    $stmt = $db->prepare("INSERT INTO donnees(donnee,date,idCapteur) VALUES(?, ?, 1)");
+                    $stmt -> bind_param('ss', $valeur, $date);
+                    $stmt -> execute();
+                }
+                
             }
             echo (" </table>");
+            
+           
 
         ?>
         </div>
