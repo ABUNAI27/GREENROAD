@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> GreenRoad</title>
-    <link rel="stylesheet" href="../CSS/contact.css?v=<?php echo time(); ?>"> 
+    <link rel="stylesheet" href="../CSS/tableaudebord.css?v=<?php echo time(); ?>"> 
 </head>
 
 
@@ -48,16 +48,24 @@
         </div>
 
     </nav>
-            <form action="" method="post">
-                <input type="submit" class="boutonLED" name="submit" value="Allumer la led Bleue" style="background-color:blue;color:white">
-                <input type="submit" class="boutonLED" name="submit2" value="Allumer la led Rouge" style="background-color:red;color:white">
-                <input type="submit" class="boutonLED" name="submit3" value="Allumer la led Verte" style="background-color:green;color:white">
-                <input type="submit" class="boutonLED" name="submit4" value="Allumer la led Magenta" style="background-color:magenta;color:white">
-                <input type="submit" class="boutonLED" name="submit5" value="Allumer la led Cyan " style="background-color:cyan;color:white">
-                <input type="submit" class="boutonLED" name="submit6" value="Allumer la led Jaune" style="background-color:yellow">
-                <input type="submit" class="boutonLED" name="submit7" value="Allumer la led Blanc" style="background-color:white">
-                <input type="submit" class="boutonLED" name="submit8" value="Eteindre la led">
-            </form>
+<div class="container">
+  <div class="Données-brutes">
+    
+    
+  </div>
+  <div class="Trames"></div>
+  <div class="Tableau"></div>
+  <div class="Actionneurs-LED">
+    <form action="" method="post">
+        <input type="submit" class="boutonLED" name="submit" value="Allumer la led Bleue" style="background-color:blue;color:white">
+        <input type="submit" class="boutonLED" name="submit2" value="Allumer la led Rouge" style="background-color:red;color:white">
+        <input type="submit" class="boutonLED" name="submit3" value="Allumer la led Verte" style="background-color:green;color:white">
+        <input type="submit" class="boutonLED" name="submit4" value="Allumer la led Magenta" style="background-color:magenta;color:white">
+        <input type="submit" class="boutonLED" name="submit5" value="Allumer la led Cyan " style="background-color:cyan;color:white">
+        <input type="submit" class="boutonLED" name="submit6" value="Allumer la led Jaune" style="background-color:yellow">
+        <input type="submit" class="boutonLED" name="submit7" value="Allumer la led Blanc" style="background-color:white">
+        <input type="submit" class="boutonLED" name="submit8" value="Eteindre la led">
+    </form>
             
 <?php
 
@@ -119,6 +127,11 @@ if(isset($_POST['submit8'])) {
     exit;
 }
 ?>
+  </div>
+  <div class="Graphique"></div>
+  <div class="Données-en-direct"></div>
+</div>
+
 </body>
 
 <!--Footer-->
