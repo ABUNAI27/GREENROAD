@@ -121,7 +121,6 @@
                     $stmt -> bind_param("iiiiiiii", $valeur, $capteur, $day, $month, $year, $hour, $min, $sec); //$valeur, $capteur, $day, $month, $year, $hour, $min, $sec
                     //1,1,1,1, 1,1,1,1
                     $stmt -> execute();
-                    $stmt->store_result();
                 }
                 
             }
