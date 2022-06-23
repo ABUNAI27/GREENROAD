@@ -107,8 +107,9 @@
                     </tr>
                 ");
                 
-                $resultat = $db -> query("SELECT COUNT(*) FROM donneeapp WHERE idcapteur = '$capteur' AND jour = '$day' AND mois = '$month' AND annee = '$year' AND heure = '$hour' AND minute = '$min' AND seconde = '$sec'");
-                
+                $countresult = $db -> query("SELECT COUNT(*) FROM donneeapp WHERE idcapteur = '$capteur' AND jour = '$day' AND mois = '$month' AND annee = '$year' AND heure = '$hour' AND minute = '$min' AND seconde = '$sec'");
+                $count = $countresult->fetch_assoc();               
+                $resultat = $count['NumRows'] ;
                 
                 if($resultat == 0){
                     echo("hey");
