@@ -8,8 +8,8 @@
     $countdelete = $countresultdelete -> fetch_assoc();               
     $resultatdelete = $countdelete['NumRows'] ;
     
-    if($resultatdelete >= 400){
-        $delete = $db -> query("DELETE FROM donneeapp LIMIT 10");
+    if($resultatdelete >= 500){
+        $delete = $db -> query("DELETE FROM donneeapp LIMIT 50");
     }
 
 ?>
