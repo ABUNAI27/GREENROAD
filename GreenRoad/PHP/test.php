@@ -109,7 +109,7 @@
                 if($key==2){
                     echo("hey");
                     $stmt = $db->prepare("INSERT INTO donneesapp(valeur,idCapteur,jour,mois,annee,heure,minute,seconde) VALUES(?,1,?,?,?,?,?,?)");
-                    $stmt -> bind_param('sssssss', $valeur, $day, $month, $year, $hour, $min, $sec);
+                    $stmt -> bind_param('iiiiiii', $valeur, $day, $month, $year, $hour, $min, $sec);
                     if($stmt -> execute()){
                       echo ("Bienvenue chez GreenRoad !");
                     }else{
