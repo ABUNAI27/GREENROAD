@@ -121,14 +121,15 @@
         <div class="Graphique"></div>
         <div class="Données-capteurs-en-direct"></div>
         <div class="Controle-LED">
-            <input type="submit" class="boutonLED" name="submit" value="Allumer la led Bleue" style="background-color:blue;color:white">
-            <input type="submit" class="boutonLED" name="submit2" value="Allumer la led Rouge" style="background-color:red;color:white">
-            <input type="submit" class="boutonLED" name="submit3" value="Allumer la led Verte" style="background-color:green;color:white">
-            <input type="submit" class="boutonLED" name="submit4" value="Allumer la led Magenta" style="background-color:magenta;color:white">
-            <input type="submit" class="boutonLED" name="submit5" value="Allumer la led Cyan " style="background-color:cyan;color:white">
-            <input type="submit" class="boutonLED" name="submit6" value="Allumer la led Jaune" style="background-color:yellow">
-            <input type="submit" class="boutonLED" name="submit7" value="Allumer la led Blanc" style="background-color:white">
-            <input type="submit" class="boutonLED" name="submit8" value="Eteindre la led">
+            <form action="" method="post">
+                <input type="submit" class="boutonLED" name="submit" value="Allumer la led Bleue" style="background-color:blue;color:white">
+                <input type="submit" class="boutonLED" name="submit2" value="Allumer la led Rouge" style="background-color:red;color:white">
+                <input type="submit" class="boutonLED" name="submit3" value="Allumer la led Verte" style="background-color:green;color:white">
+                <input type="submit" class="boutonLED" name="submit4" value="Allumer la led Magenta" style="background-color:magenta;color:white">
+                <input type="submit" class="boutonLED" name="submit5" value="Allumer la led Cyan " style="background-color:cyan;color:white">
+                <input type="submit" class="boutonLED" name="submit6" value="Allumer la led Jaune" style="background-color:yellow">
+                <input type="submit" class="boutonLED" name="submit7" value="Allumer la led Blanc" style="background-color:white">
+                <input type="submit" class="boutonLED" name="submit8" value="Eteindre la led">
             </form>
             <?php
 
