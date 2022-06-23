@@ -110,7 +110,7 @@
                     echo("hey");
                     $capteur = 1;
                     $query = $db->prepare("INSERT INTO donnees (donnee, date, idCapteur) VALUES(:value,:datetime,1)");
-                    $query->bindParam(':value',$value);
+                    $query->bindParam(':value',$valeur);
                     $query->bindParam(':datetime',$date);
                     $query->execute();
                     /*$stmt = $db->prepare("INSERT INTO donneesapp(valeur,idCapteur,jour,mois,annee,heure,minute,seconde) VALUES(?,?,?,?,?,?,?,?)");
