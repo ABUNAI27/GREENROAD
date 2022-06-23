@@ -58,7 +58,7 @@
 
 if(isset($_POST['submit'])) {
 
-        $monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3-A&TRAME=1G3-AAAAAAAAAA";   definir trame
+        $monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3-A&TRAME=1G3-AAAAAAAAAA";
 
         header("Location: $monUrl");
         exit;
@@ -66,7 +66,7 @@ if(isset($_POST['submit'])) {
 
 if(isset($_POST['submit2'])) {
 
-        $monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3-A&TRAME=1G3-AAAAAAAAAA";   definir trame
+        $monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3-A&TRAME=1G3-AAAAAAAAAA";
 
     header("Location: $monUrl");
     exit;
@@ -74,7 +74,7 @@ if(isset($_POST['submit2'])) {
 
 if(isset($_POST['submit3'])) {
 
-        $monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3-A&TRAME=1G3-AAAAAAAAAA";   definir trame
+        $monUrl="http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G3-A&TRAME=1G3-AAAAAAAAAA";
 
     header("Location: $monUrl");
     exit;
