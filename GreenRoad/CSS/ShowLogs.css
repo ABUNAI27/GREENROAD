@@ -147,7 +147,7 @@ nav .onglets a:hover {
     height: 100%;
     grid-template-areas:
         "Données-brutes Données-brutes Données-brutes"
-        "Trames Graphique Données-capteurs-en-direct"
+        "Trames Graphique Graphique"
         "Tableau Tableau Tableau";
     overflow: auto;
 
@@ -171,9 +171,6 @@ nav .onglets a:hover {
   border: 1px solid #000;
 }
 
-.Données-capteurs-en-direct { grid-area: Données-capteurs-en-direct; 
-  border: 1px solid #000;
-}
 
 .Données-brutes { grid-area: Données-brutes; 
     border: 1px solid #000;
