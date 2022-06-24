@@ -6,12 +6,13 @@
     $heure ='';
 
     //Récupérer les données
-    $sql = "SELECT donnee, `date` FROM `donnees` INNER JOIN capteurs ON donnees.idCapteur = capteurs.idCapteur WHERE type = 'son' ";
+    $sql = "SELECT valeur, jour, mois, annee, heure, minute, seconde FROM donneeapp ";
     $result = $db -> query($sql);
 
     //Boucle données
     while ($row = $result->fetch_assoc()) {
-        $heure = $heure . '"'. $row['date'].'",';
+        $date = date("Y-m-d H:i:s",mktime($row['heure'],$row['minute'],$row['seconde'],$row['mois'],$row['jour'],$row['annee']));
+        $heure = $heure . '"'. $date.'",';
 
         $Mesure_Atmospherique = $Mesure_Atmospherique . '"'. $row['donnee'].'",';
     }
