@@ -147,7 +147,7 @@
         ?>
         </div>
         <div class="Graphique">
-            <?php include_once('graphinte.php'); ?>
+            <iframe src="graphinte.php" title="Graphique du son" width="90%" height="90%" text-align="center" background-color="white"></iframe>
         </div>
         <div class="Données-brutes">
        <?php 
