@@ -6,7 +6,7 @@
     $heure ='';
 
     //Récupérer les données
-    $sql = "SELECT valeur, jour, mois, annee, heure, minute, seconde FROM donneeapp LIMIT 1000 ";
+    $sql = "SELECT valeur, jour, mois, annee, heure, minute, seconde FROM donneeapp LIMIT 50 ";
     $result = $db -> query($sql);
 
     //Boucle données
