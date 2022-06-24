@@ -6,7 +6,7 @@
     $heure ='';
 
     //Récupérer les données
-    $sql = "SELECT valeur, jour, mois, annee, heure, minute, seconde FROM donneeapp ORDER BY idDonnee DESC LIMIT 50 ";
+    $sql = "SELECT * FROM donneeapp ORDER BY idDonnee DESC LIMIT 50 ";
     $result = $db -> query($sql);
 
     //Boucle données
