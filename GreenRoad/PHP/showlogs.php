@@ -147,7 +147,6 @@
         ?>
         </div>
         <div class="Graphique"></div>
-        <div class="Données-capteurs-en-direct"></div>
         <div class="Données-brutes">
        <?php 
             echo "Raw Data:<br />";
