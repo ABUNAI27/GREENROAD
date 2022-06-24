@@ -121,10 +121,10 @@
                 $resultat = $count['NumRows'] ;
                 
                 if($resultat == 0){
-                    $query = $db->prepare("INSERT INTO donnees (donnee, date, idCapteur) VALUES(:value,:datetime,:capteur)");
-                    $query->bindParam(':value',$valeur);
-                    $query->bindParam(':datetime',$date);
-                    $query->bindParam(':capteur',$capteur);
+                    $query = $db->prepare('INSERT INTO donnees (donnee, date, idCapteur) VALUES(:value,:datetime,:capteur)');
+                    $query->bind_param(":value",$valeur);
+                    $query->bind_param(":datetime",$date);
+                    $query->bind_param(":capteur",$capteur);
                     $query->execute();
                     
                     /*$stmt = $db->prepare('INSERT INTO donneeapp (valeur,idCapteur,jour,mois,annee,heure,minute,seconde) VALUES (?,?,?,?,?,?,?,?)'); //?,?,?,?,?,?,?,? i,i,i,i,i,i,i,i
