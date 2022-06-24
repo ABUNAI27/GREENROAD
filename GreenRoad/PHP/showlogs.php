@@ -146,7 +146,9 @@
             }
         ?>
         </div>
-        <div class="Graphique"></div>
+        <div class="Graphique">
+            <?php include_once('graphinte.php'); ?>
+        </div>
         <div class="Données-brutes">
        <?php 
             echo "Raw Data:<br />";
