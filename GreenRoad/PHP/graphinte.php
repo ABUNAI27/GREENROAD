@@ -14,7 +14,7 @@
         $date = date("Y-m-d H:i:s",mktime($row['heure'],$row['minute'],$row['seconde'],$row['mois'],$row['jour'],$row['annee']));
         $heure = $heure . '"'. $date.'",';
 
-        $Mesure_Atmospherique = $Mesure_Atmospherique . '"'. $row['donnee'].'",';
+        $Mesure_Atmospherique = $Mesure_Atmospherique . '"'. $row['valeur'].'",';
     }
 
     $Mesure_Atmospherique = trim($Mesure_Atmospherique,",");
